@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:notifica/message.dart';
-void main() {
+import 'package:notifica/push_notifications_services.dart';
+void main() async {
+
+  //WidgetsFlutterBinding.ensureInitialized();
+  await PushNotificationService.initializeApp();
   runApp(const MyHomePageApp());
 }
 
